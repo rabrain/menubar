@@ -13,10 +13,15 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [macos-latest] # skip windows-latest (fails lint) and ubuntu-latest (fails test)
+        os: [macos-latest, windows-latest] # skip ubuntu-latest (fails test)
 
     steps:
-      - uses: actions/checkout@v2
-      - run: yarn install
+      - uses: actions/checkout@v4
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18.x
+          cache: 'npm'
+      - run: yarn install --frozen-lockfile
       - run: yarn lint
       - run: yarn test
