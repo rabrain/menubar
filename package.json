@@ -1,16 +1,16 @@
 {
   "name": "@rabrain/menubar",
-  "version": "9.4.1",
-  "author": "Max Ogden",
+  "version": "9.4.2",
+  "author": "lilac",
   "bugs": {
-    "url": "https://github.com/maxogden/menubar/issues"
+    "url": "https://github.com/rabrain/menubar"
   },
   "description": "high level way to create menubar desktop applications with electron",
   "files": [
     "/assets",
     "/lib"
   ],
-  "homepage": "https://github.com/maxogden/menubar",
+  "homepage": "https://www.rabrain.com/",
   "keywords": [
     "electron",
     "shell",
@@ -31,7 +31,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/maxogden/menubar.git"
+    "url": "https://github.com/rabrain/menubar.git"
   },
   "scripts": {
     "build": "rimraf lib/ && tsc",
